@@ -2,7 +2,7 @@
 > File structure needs to be refactored.
 
 ## Step 1 - Create the View Model
-### [NewPersonWindowViewModel.cs](./wpfApp1/NewPersonWindowViewModel.cs)
+### [NewPersonWindowViewModel.cs](./wpfApp1/WpfApp1/NewPersonWindowViewModel.cs)
 The view model should extend the `System.ComponentModel.INotifyPropertyChanged` interface for the ui binding to know when an update occurs.
 
 ```
@@ -41,7 +41,7 @@ public string FullName
 ```
 
 ## Configuring the View Controller
-### [NewPersonWindow.xaml.cs](./wpfApp1/NewPersonWindow.xaml.cs)
+### [NewPersonWindow.xaml.cs](./wpfApp1/WpfApp1/NewPersonWindow.xaml.cs)
 In the view controller's constructor, simply instantiate the view model and assign it to the `DataContext` property.
 ```
 viewModel = new NewPersonWindowViewModel();
@@ -49,7 +49,7 @@ DataContext = viewModel;
 ```
 
 ## Configure the UI
-### [NewPersonWindow.xaml](./wpfApp1/NewPersonWindow.xaml)
+### [NewPersonWindow.xaml](./wpfApp1/WpfApp1/NewPersonWindow.xaml)
 The Last step is to add the binding on the ui element. Set the `UpdateSourceTrigger` property to `PropertyChanged` to update the bound property on change.
 ```
 <TextBox x:Name="nameTextBox" TextWrapping="Wrap" FontSize="16" Text="{Binding FullName, UpdateSourceTrigger=PropertyChanged}"/>
