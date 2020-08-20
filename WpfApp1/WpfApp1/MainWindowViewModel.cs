@@ -11,8 +11,8 @@ namespace WpfApp1
     public class MainWindowViewModel : INotifyPropertyChanged
     {
         private ObservableCollection<Person> people;
-        public event PropertyChangedEventHandler PropertyChanged;
         private Person selectedPerson;
+        public event PropertyChangedEventHandler PropertyChanged;
         public Person SelectedPerson
         {
             get
