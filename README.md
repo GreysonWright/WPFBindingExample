@@ -42,13 +42,13 @@ public string FullName
 
 ## Configuring the View Controller
 ### [NewPersonWindow.xaml.cs](./WpfApp1/WpfApp1/NewPersonWindow.xaml.cs)
-In the view controller's constructor, simply instantiate the view model and assign it to the `DataContext` property.
+In the view controller's constructor, simply instantiate the view model and assign it to the `DataContext` property. **Note: The `DataContext` property can be set in the view xaml. I chose to do it here instead**
 ```
 viewModel = new NewPersonWindowViewModel();
 DataContext = viewModel;
 ```
 
-## Configure the UI
+## Configure the View
 ### [NewPersonWindow.xaml](./WpfApp1/WpfApp1/NewPersonWindow.xaml)
 The Last step is to add the binding on the ui element. Set the `UpdateSourceTrigger` property to `PropertyChanged` to update the bound property on change.
 ```
